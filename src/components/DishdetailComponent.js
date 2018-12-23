@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from 'reactstrap';
 
-  function RenderDish(dish){
+  function RenderDish({dish}){
       if(dish!=null){
           return (
               <div className="col-12 col-md-5 m-1">
@@ -13,7 +13,7 @@ import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from 're
                       </CardBody>
                   </Card>
               </div>
-          )
+          );
       }
       else {
         return(<div></div>)
@@ -21,18 +21,17 @@ import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from 're
     }
 
 
-  function RenderComments(comments){
-        if(comments==null){
-            return(<div></div>);
-        }
+  function RenderComments({comments}){
+        if(comments!=null){
+
         const comment = comments.map((comment)=>{
            return(
-            <div key={comment.id}>
-                <ul className="list-unstyled">
-                    <li>{comment.comment}</li>
-                    <li>-- {comment.author}, {new Intl.DateTimeFormat('en-US',{year: 'numeric', month:'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))}</li>
-                </ul>
-            </div>
+              <div key={comment.id}>
+                  <ul className="list-unstyled">
+                      <li>{comment.comment}</li>
+                      <li>-- {comment.author}, {new Intl.DateTimeFormat('en-US',{year: 'numeric', month:'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))}</li>
+                  </ul>
+              </div>
            );
         });
         return(
@@ -42,7 +41,9 @@ import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from 're
             {comment}
             </ul>
             </div>
-        )
+        );
+      }else
+      return(<div></div>);
     }
 
     const DishDetail = (props) => {
@@ -54,11 +55,13 @@ import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from 're
         }
 
         return(
+          <div className="container">
             <div className="row">
               <RenderDish dish={props.dish} />
               <RenderComments comments={props.dish.comments} />
 
             </div>
+          </div>
         );
     }
 
