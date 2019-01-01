@@ -4,8 +4,8 @@ import {Link} from 'react-router-dom';
 import { Control, LocalForm, Errors } from 'react-redux-form';
 
 const required = (val) => val && val.length;
-const maxLength = (len) => (val) => !(val) || (val.lengrh <= len)
-const minLength = (len) => (val) => !(val) && (val.lengrh >= len)
+const maxLength = (len) => (val) => !(val) || (val.lengrh <= len);
+const minLength = (len) => (val) => val && (val.length >= len);
 const isNumber = (val) => !isNaN(Number(val));
 const validEmail = (val) => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val);
 
@@ -179,7 +179,7 @@ class Contact extends Component {
                   <Row className="form-group">
                     <Label htmlFor="message" md={2}>Your Feedback</Label>
                     <Col md={10}>
-                      <Control.textarea modal=".message" id="message" name="message"
+                      <Control.textarea model=".message" id="message" name="message"
                         placeholder="Your Feedback" rows="12"
                         className="form-control"/>
                     </Col>
