@@ -3,7 +3,7 @@ import Home from './HomeComponent';
 import Menu from './MenuComponent';
 import Contact from './ContactComponent';
 import About from './AboutComponent';
-import DishDetail from './DishdetailComponent';
+import { DishDetail, CommentForm } from './DishdetailComponent';
 import Header from './HeaderComponent';
 import Footer from './FooterComponent';
 

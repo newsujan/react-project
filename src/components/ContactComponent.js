@@ -112,7 +112,7 @@ class Contact extends Component {
                         />
                     </Col>
                   </Row>
-                  <Row className="formg-roup">
+                  <Row className="form-group">
                     <Label htmlFor="telnum" md={2}>Tel. Number</Label>
                     <Col md={10}>
                       <Control.text model=".telnum" id="telnum" name="telnum"
