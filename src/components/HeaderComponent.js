@@ -48,19 +48,19 @@ class Header extends Component {
               <Nav navbar>
                 <NavItem>
                   <NavLink className="nav-link" to="/home" />
-                  <span className="fa fa-home -fa-lg"></span>Home
+                  <span className="fa fa-home -fa-lg"></span> Home
                 </NavItem>
                 <NavItem>
                   <NavLink className="nav-link" to="/aboutus" />
-                  <span className="fa fa-info -fa-lg"></span>About Us
+                  <span className="fa fa-info -fa-lg"></span> About Us
                 </NavItem>
                 <NavItem>
                   <NavLink className="nav-link" to="/menu" />
-                  <span className="fa fa-list -fa-lg"></span>Menu
+                  <span className="fa fa-list -fa-lg"></span> Menu
                 </NavItem>
                 <NavItem>
                   <NavLink className="nav-link" to="/contactus" />
-                  <span className="fa fa-address-card -fa-lg"></span>Contact Us
+                  <span className="fa fa-address-card -fa-lg"></span> Contact Us
                 </NavItem>
               </Nav>
               <Nav className="ml-auto" navbar>

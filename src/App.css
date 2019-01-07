@@ -65,7 +65,13 @@ address{
     background-color: #512DA8;
 }
 
-.nav-link{
-  padding: 10px 10px 10px 10px;
-  margin-left: 50px;
+a.nav-link{
+  position: absolute;
+  width: 70px;
+  height: 30px;
+}
+li.nav-item{
+  font-size: 18px;
+  color: #aaaaaa;
+  margin-left: 15px;
 }
